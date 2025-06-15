@@ -4,12 +4,10 @@ def p_linear(n):
     try:
         n = int(n)
     except:
-        print("Insira um número inteiro.")
-        return
+        return "Insira um número inteiro."
     
     if n < 2:
-        print('Insira um valor maior que 1.')
-        return
+        return 'Insira um valor maior que 1.'
     
     primos = []
     for i in range(2, n+1):
@@ -24,3 +22,9 @@ def p_linear(n):
             primos.append(i)
 
     return primos
+
+
+testes = [0, 1, 2, 5, 10, 'a']
+for valor in testes:
+    print("Entrada: ", valor,'\n', "Saída: ", p_linear(valor))
+    print()
